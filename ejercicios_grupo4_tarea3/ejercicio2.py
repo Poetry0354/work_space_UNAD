@@ -34,7 +34,7 @@ dias_semana = {
     "MIÉRCOLES": "CICLISMO",
     "JUEVES": "ATLETISMO",
     "VIERNES": "NATACIÓN",
-    "SÁBADO": "MONTAÑISMO",
+    "SABADO": "MONTAÑISMO",
 }
 # Verificar si el día ingresado es válido
 if dia in dias_semana:
