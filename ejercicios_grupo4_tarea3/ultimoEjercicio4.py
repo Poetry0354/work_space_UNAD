@@ -17,8 +17,25 @@ superior.
 """
 
 print(
-    "Bienvenidos estudiantes de la UNAD, a continuación se les indicará si han aprobado el curso"
+    "Bienvenido al programa de evaluación de notas del curso, vamor a calcular si passaste o no"
 )
-print("Por favor ingrese su nota definitiva: ")
+print("Por favor ingresa tu nota definitiva")
 
-nota = float(input("Nota: "))
+try:
+    # Solicita al usuario que ingrese su nota definitiva y la convierte a un número flotante.
+    nota_definitiva = float(input("Nota definitiva: "))
+
+    # Verifica la nota y proporciona retroalimentación.
+    if nota_definitiva < 3:
+        print("No aprobó el curso.")  # Nota menor a 3: No aprobó el curso.
+    elif 3 <= nota_definitiva < 4.5:
+        print(
+            "Aprobó el curso, muchas felicidades."
+        )  # Nota entre 3 y 4.5: Aprobó el curso.
+    else:
+        print(
+            "Aprobó el curso con un desempeño superior."
+        )  # Nota 4.5 o mayor: Desempeño superior.
+except ValueError:
+    # Maneja entradas inválidas (valores no numéricos).
+    print("Entrada inválida. Por favor, ingrese un número.")
