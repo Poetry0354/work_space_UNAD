@@ -1,0 +1,4 @@
+# Ejercicios del grupo 3
+Este grupo de ejercicios se centra en la aplicación de conceptos de programación para resolver problemas que involucran cálculos y la clasificación de datos según criterios específicos. Los ejercicios abarcan el uso de estructuras de control como los ciclos for y while, el manejo de datos con listas y la creación de funciones. Los problemas planteados simulan situaciones prácticas en las que se requiere automatizar cálculos (como descuentos y propinas) y analizar datos para clasificarlos (como niveles de azúcar en pacientes). En resumen, el Grupo 3 pone énfasis en el desarrollo de habilidades para traducir escenarios del mundo real en soluciones algorítmicas, con un enfoque en la precisión de los cálculos y la lógica de la clasificación.
+
+## Tu puedes, recuerda el porque...
