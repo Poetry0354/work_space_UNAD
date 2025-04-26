@@ -13,3 +13,75 @@
 * artículos de las otras líneas.
 """
 
+# Definición de constantes
+DESCUENTO_PORTATIL = 0.15
+DESCUENTO_CAMARA = 0.05
+DESCUENTO_OTROS = 0.02
+NUM_VENTAS = 25
+# Inicialización de contadores
+contador_portatiles = 0
+contador_camaras = 0
+contador_otros = 0
+
+# Inicializacion de variables "ventas en las lineas"
+ventas_portatiles = 0
+ventas_camaras = 0
+ventas_otros = 0
+
+
+# Bucle para realizar las ventas
+
+for venta in range(NUM_VENTAS):
+    # Solicitar el articulo a comprar
+    articulo = input("Ingrese el tipo de artículo a comprar (portátil, cámara, otros): ").strip().lower()
+    print("Elegiste:", articulo)
+
+    # Validar el tipo de artículo
+    while articulo not in ["portátil", "cámara", "otros"]:
+        print("Tipo de artículo no válido. Intente nuevamente.")
+        articulo = input("Ingrese el tipo de artículo a comprar (portátil, cámara, otros): ").strip().lower()
+
+    
+    # Solicitar el valor del artículo
+    valor_articulo = float(input("Ingrese el valor del artículo: "))
+
+    # Validar el valor del artículo
+    while valor_articulo <= 0:
+        print("El valor del artículo debe ser mayor que cero. Intente nuevamente.")
+        valor_articulo = float(input("Ingrese el valor del artículo: "))
+
+    # Calcular el descuento y el valor final a pagar
+    if articulo == "portátil":
+        descuento = valor_articulo * DESCUENTO_PORTATIL
+        valor_final = valor_articulo - descuento
+        contador_portatiles += 1
+        ventas_portatiles += valor_articulo
+    elif articulo == "cámara":
+        descuento = valor_articulo * DESCUENTO_CAMARA
+        valor_final = valor_articulo - descuento
+        contador_camaras += 1
+        ventas_camaras += valor_articulo
+    else:
+        descuento = valor_articulo * DESCUENTO_OTROS
+        valor_final = valor_articulo - descuento
+        contador_otros += 1
+        ventas_otros += valor_articulo
+
+    # Mostrar el descuento y el valor final a pagar
+    print(f"Descuento: {descuento:.2f}")
+    print(f"Valor final a pagar: {valor_final:.2f}")
+
+
+# Mostrar la cantidad de artículos vendidos en cada línea
+print("\nResumen de ventas:")
+print(f"Cantidad de portátiles vendidos: {contador_portatiles}")
+print(f"Cantidad de cámaras vendidas: {contador_camaras}")
+print(f"Cantidad de otros artículos vendidos: {contador_otros}")
+# Mostrar el total de ventas por línea
+print(f"Total ventas portátiles: {ventas_portatiles:.2f}")
+print(f"Total ventas cámaras: {ventas_camaras:.2f}")
+print(f"Total ventas otros artículos: {ventas_otros:.2f}")
+# Mostrar el total de ventas
+total_ventas = ventas_portatiles + ventas_camaras + ventas_otros
+print(f"Total de ventas: {total_ventas:.2f}")
+
