@@ -5,9 +5,9 @@ Este grupo de ejercicios se centra en la aplicación de conceptos de programaci�
 
 ## Ejercicios a realizar:
 
-### 3. Grupo
+## 3. Grupo
 
-*Resolver el siguiente ejercicio con el ciclo for:*
+###*Resolver el siguiente ejercicio con el ciclo for:*
 1. En el Black Friday la tienda de tecnología “byte” va a realizar
 un descuento del 15% en portátiles, del 5% en cámaras y del
 2% en el resto de artículos. Usted debe construir un programa
@@ -19,7 +19,7 @@ la cantidad de artículos vendidos en la línea portátil, la cantidad
 de artículos vendidos en la línea de cámaras y la cantidad de
 artículos de las otras líneas
 
-*Resolver el siguiente ejercicio con el ciclo while:*
+###*Resolver el siguiente ejercicio con el ciclo while:*
 2. El restaurante “doña Pancha” desea construir un programa
 para calcular el valor de la propina sugerida para n clientes.
 Para cada cliente, el programa debe solicitar el valor de la
@@ -35,7 +35,7 @@ programa que solicite la cantidad de horas que invierte cada
 persona encuestada el domingo, almacenando ese dato en una
 lista y que muestre el promedio de horas de todo el grupo.
 
-*Resolver el siguiente ejercicio usando una función:*
+###*Resolver el siguiente ejercicio usando una función:*
 4. Construir una función que permita verificar acorde a los niveles
 de azúcar de un paciente si el paciente es diabético. Para esto,
 la función debe recibir como parámetro el nivel de glucosa y con
