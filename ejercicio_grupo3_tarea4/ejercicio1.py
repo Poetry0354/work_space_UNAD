@@ -1,7 +1,7 @@
 """
 * Ejercicio 1.
 * Resolver el siguiente ejercicio con el ciclo for:
-* 1. En el Black Friday la tienda de tecnología “byte” va a realizar
+* 1. En el Black Friday la tienda de tecnología "byte" va a realizar
 * un descuento del 15% en portátiles, del 5% en cámaras y del
 * 2% en el resto de artículos. Usted debe construir un programa
 * que permita calcular para 25 ventas el valor del descuento,
@@ -13,103 +13,112 @@
 * artículos de las otras líneas.
 """
 
-# Definición de constantes
-DESCUENTO_PORTATIL = 0.15
-DESCUENTO_CAMARA = 0.05
-DESCUENTO_OTROS = 0.02
+# Definición de constantes y diccionarios
+DESCUENTOS = {
+    'portátil': 0.15,
+    'cámara': 0.05,
+    'otros': 0.02
+}
+
 NUM_VENTAS = 25
-# Inicialización de contadores
-contador_portatiles = 0
-contador_camaras = 0
-contador_otros = 0
 
-# Inicializacion de variables "ventas en las lineas"
-ventas_portatiles = 0
-ventas_camaras = 0
-ventas_otros = 0
+# Diccionario para almacenar las ventas
+ventas = {
+    'portátil': {'cantidad': 0, 'total_sin_descuento': 0, 'total_con_descuento': 0},
+    'cámara': {'cantidad': 0, 'total_sin_descuento': 0, 'total_con_descuento': 0},
+    'otros': {'cantidad': 0, 'total_sin_descuento': 0, 'total_con_descuento': 0}
+}
 
-# Inicializacion de varaibles para el valor con el descuento
-ventas_portatiles_desc = 0  # Valor con descuento
-ventas_camaras_desc = 0     # Valor con descuento
-ventas_otros_desc = 0       # Valor con descuento
-
+# Diccionario para detallar los artículos en "otros"
+otros_articulos = {}
 
 # Bucle para realizar las ventas
 for venta in range(NUM_VENTAS):
-    # Preguntar si desea continuar
-    continuar = input("¿Desea registrar una venta? (s/n): ").strip().lower()
+    continuar = input("\n¿Desea registrar una venta? (s/n): ").strip().lower()
     if continuar != 's':
-        break 
-    # Solicitar el articulo a comprar
-    articulo = input("Ingrese el tipo de artículo a comprar (portátil, cámara, otros): ").strip().lower()
-    print("Elegiste:", articulo)
+        break
 
-    # Validar el tipo de artículo
-    while articulo not in ["portátil", "cámara", "otros"]:
-        print("Tipo de artículo no válido. Intente nuevamente. Tildes se consideran.")
-        articulo = input("Ingrese el tipo de artículo a comprar (portátil, cámara, otros): ").strip().lower()
-
+    print("\nOpciones de artículos:")
+    print("1. Portátil")
+    print("2. Cámara")
+    print("3. Otros")
     
-    # Solicitar el valor del artículo
-    valor_articulo = float(input("Ingrese el valor del artículo: "))
+    opcion = input("Seleccione el número del artículo (1-3): ").strip()
+    
+    # Validar la opción
+    while opcion not in ['1', '2', '3']:
+        print("Opción no válida. Intente nuevamente.")
+        print("\nOpciones de artículos:")
+        print("1. Portátil")
+        print("2. Cámara")
+        print("3. Otros")
+        opcion = input("Seleccione el número del artículo (1-3): ").strip()
+    
+    # Mapear número a artículo
+    mapeo_articulos = {
+        '1': 'portátil',
+        '2': 'cámara',
+        '3': 'otros'
+    }
+    
+    articulo = mapeo_articulos[opcion]
+    
+    # Si es "otros", pedir detalle
+    if opcion == "3":
+        detalle_articulo = input("Especifique el tipo de artículo: ").strip().lower()
+        otros_articulos[detalle_articulo] = otros_articulos.get(detalle_articulo, 0) + 1
+        print(f"Registrado como: otros - {detalle_articulo}")
+    
+    # Solicitar y validar el valor del artículo
+    while True:
+        try:
+            valor_articulo = float(input("Ingrese el valor del artículo: $"))
+            if valor_articulo <= 0:
+                print("El valor debe ser mayor que cero.")
+                continue
+            break
+        except ValueError:
+            print("Por favor ingrese un valor numérico válido.")
 
-    # Validar el valor del artículo
-    while valor_articulo <= 0:
-        print("El valor del artículo debe ser mayor que cero. Intente nuevamente.")
-        valor_articulo = float(input("Ingrese el valor del artículo: "))
+    # Calcular descuento y actualizar ventas
+    descuento = valor_articulo * DESCUENTOS[articulo]
+    valor_final = valor_articulo - descuento
 
+    # Actualizar el diccionario de ventas
+    ventas[articulo]['cantidad'] += 1
+    ventas[articulo]['total_sin_descuento'] += valor_articulo
+    ventas[articulo]['total_con_descuento'] += valor_final
 
-    # Calcular el descuento y el valor final a pagar
-    if articulo == "portátil":
-        descuento = valor_articulo * DESCUENTO_PORTATIL
-        valor_final = valor_articulo - descuento
-        contador_portatiles += 1
-        ventas_portatiles += valor_articulo
-        ventas_portatiles_desc += valor_final
-    elif articulo == "cámara":
-        descuento = valor_articulo * DESCUENTO_CAMARA
-        valor_final = valor_articulo - descuento
-        contador_camaras += 1
-        ventas_camaras += valor_articulo
-        ventas_camaras_desc += valor_final
-    else:
-        descuento = valor_articulo * DESCUENTO_OTROS
-        valor_final = valor_articulo - descuento
-        contador_otros += 1
-        ventas_otros += valor_articulo
-        ventas_otros_desc += valor_final
+    # Mostrar el descuento y valor final
+    print(f"\nDescuento aplicado: ${descuento:.2f}")
+    print(f"Valor final a pagar: ${valor_final:.2f}")
 
-    # Mostrar el descuento y el valor final a pagar
-    print(f"Descuento: {descuento:.2f}")
-    print(f"Valor final a pagar: {valor_final:.2f}")
+# Mostrar resumen de ventas
+print("\nResumen de ventas:")
+ventas_realizadas = 0
 
+for articulo, datos in ventas.items():
+    if datos["cantidad"] > 0:
+        print(f"\nArtículo: {articulo.capitalize()}")
+        print(f"Cantidad vendida: {datos['cantidad']}")
+        print(f"Total sin descuento: ${datos['total_sin_descuento']:,.2f}")
+        print(f"Total con descuento: ${datos['total_con_descuento']:,.2f}")
+        ventas_realizadas += datos["cantidad"]
 
-# Mostrar la cantidad de artículos vendidos en cada línea
-print(f"\nSe registraron {venta + 1 if continuar == 's' else venta} ventas en total.")
-print("\nResumen de ventas por cantidad:")
-print(f"Cantidad de portátiles vendidos: {contador_portatiles}")
-print(f"Cantidad de cámaras vendidas: {contador_camaras}")
-print(f"Cantidad de otros artículos vendidos: {contador_otros}")
+# Si hay artículos en "otros", mostrar el detalle
+if otros_articulos:
+    print("\nDetalle de artículos en categoría 'otros':")
+    for articulo, cantidad in otros_articulos.items():
+        print(f"- {articulo.capitalize()}: {cantidad} unidad(es)")
 
-# Mostrar el total de ventas por línea (precio original)
-print("\nTotal de ventas (sin descuento):")
-print(f"Total ventas portátiles: ${ventas_portatiles:,.2f}")
-print(f"Total ventas cámaras: ${ventas_camaras:,.2f}")
-print(f"Total ventas otros artículos: ${ventas_otros:,.2f}")
+# Calcular totales generales
+total_sin_descuento = sum(datos["total_sin_descuento"] for datos in ventas.values())
+total_con_descuento = sum(datos["total_con_descuento"] for datos in ventas.values())
+total_descuento = total_sin_descuento - total_con_descuento
 
-# Mostrar el total de ventas por línea (con descuento)
-print("\nTotal de ventas (con descuento aplicado):")
-print(f"Total ventas portátiles: ${ventas_portatiles_desc:,.2f}")
-print(f"Total ventas cámaras: ${ventas_camaras_desc:,.2f}")
-print(f"Total ventas otros artículos: ${ventas_otros_desc:,.2f}")
-
-# Mostrar resumen final de ventas
-total_ventas_original = ventas_portatiles + ventas_camaras + ventas_otros
-total_ventas_descuento = ventas_portatiles_desc + ventas_camaras_desc + ventas_otros_desc
-total_descuentos = total_ventas_original - total_ventas_descuento
-
-print("\nResumen final:")
-print(f"Total de ventas sin descuento: ${total_ventas_original:,.2f}")
-print(f"Total de ventas con descuento: ${total_ventas_descuento:,.2f}")
-print(f"Total de descuentos aplicados: ${total_descuentos:,.2f}")
+# Mostrar totales generales
+print(f"\nTotal de ventas realizadas: {ventas_realizadas}")
+print(f"Total sin descuentos: ${total_sin_descuento:,.2f}")
+print(f"Total con descuentos: ${total_con_descuento:,.2f}")
+print(f"Total de descuentos aplicados: ${total_descuento:,.2f}")
 
