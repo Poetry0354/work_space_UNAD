@@ -34,10 +34,17 @@ otros_articulos = {}
 
 # Bucle para realizar las ventas
 for venta in range(NUM_VENTAS):
-    continuar = input("\n¿Desea registrar una venta? (s/n): ").strip().lower()
-    if continuar != 's':
+    while True:
+        continuar = input("\n¿Desea registrar una venta? (s/n): ").strip().lower()
+        if continuar in ['s', 'n']:
+            break
+        else:
+            print("Opción no válida. Por favor, ingrese 's' para sí o 'n' para no.")
+    if continuar == 'n':
+        print("Proceso de ventas finalizado.")
         break
 
+    # Solicitar el tipo de artículo
     print("\nOpciones de artículos:")
     print("1. Portátil")
     print("2. Cámara")
@@ -78,7 +85,7 @@ for venta in range(NUM_VENTAS):
                 continue
             break
         except ValueError:
-            print("Por favor ingrese un valor numérico válido.")
+            print("Por favor ingrese un valor numérico válido. Ten en cuenta las comas y puntos.")
 
     # Calcular descuento y actualizar ventas
     descuento = valor_articulo * DESCUENTOS[articulo]
