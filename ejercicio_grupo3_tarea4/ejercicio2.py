@@ -37,7 +37,7 @@ def valor_propina():
     """
     Este subprograma/Función se encarga de calcular la propina
     en base del valor ingresado por la caja/mesero.
-    parametro: valor_cuenta
+    argumento: valor_cuenta
     retorno: 0.15 * valor cuenta = propina.
     """
     #variables 
@@ -52,8 +52,17 @@ def valor_propina():
             print("El valor debe de ser mayor a 0")
         except ValueError:
             print("Por favor ingresa un numero valido")
+            
     #Calculo.
     propina_sugerida = PROPINA * valor_cuenta
+    
+    # Mostrar información de la cuenta y propina
+    print("\n" + "="*50)
+    print("DETALLE DE LA CUENTA".center(50))
+    print("="*50)
+    print(f"Valor de la cuenta: ${valor_cuenta:,.2f}")
+    print(f"Propina sugerida (15%): ${propina_sugerida:,.2f}")
+    print("="*50)
 
     return valor_cuenta, propina_sugerida
 
@@ -61,7 +70,7 @@ def referido():
     """
     Esta Función se trabaja el caso en el que el cliente, quiera o no, dejar un referido 
     para el restaurante, como recomendación por la atención y servicio.
-    parametro: Toma de Decisiones.
+    argumentos: Toma de Decisiones.
     retorno: No hay.
     ! Nota: La idea es almacenar el nombre y telefono del referido, si el cliente dice que "Si".
     ! Variable Global...
@@ -96,4 +105,40 @@ def referido():
         print("No se registró ningun referido..")
 
 
+def pagar_propina(valor_cuenta, propina_sugerida):
+    """
+    Se hace toma de decisiones sobre si paga con la propina o no.
+    Si paga con la propina, se suma al total de la cuenta, si no, no se actualiza.
+    
+    argumentos: "valor de cuenta" a actualizar..., propina sugerida a utilisar.
+    retorno: Valor actualizado o no, con propina.
+    """
+    #variable global
+    global TOTAL_VENTAS
+
+    while True:
+        pagar_con_propina = input("\nEl Cliente pagará con propina? (si/no): ").strip().lower()
+        if pagar_con_propina in ['si', 'no']:
+            break
+        print("Opción no válida. Por favor, ingrese 'si' o 'no'.")
+
+    valor_total_cuenta = valor_cuenta
+    pago_propina = False
+
+    if pagar_con_propina == 'si':
+        valor_total_cuenta += propina_sugerida
+        pago_propina = True
+        print(f"El cliente pagará ${propina_sugerida:,.2f} de propina")
+    else:
+        print("El cliente no pagará la propina sugerida.")
+
+    #Se almacena el valor con la propina
+    TOTAL_VENTAS += valor_total_cuenta
+    print(f"\nVenta registrada: ${valor_total_cuenta:,.2f}")
+    print(f"Total de ventas del día: ${TOTAL_VENTAS:,.2f}")
+
+    return valor_total_cuenta, pago_propina
+
+
+def factura_electronica():
     
