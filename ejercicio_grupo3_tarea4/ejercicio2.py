@@ -87,9 +87,9 @@ def referido():
     if referido_cliente == 'si':
         nombre_referido = input("Por favor ingresa el nombre del referido: ")
         while True:
-            telefono_referido = ("Ingrese el telefono del referido por favor: ").strip()
+            telefono_referido = input("Ingrese el telefono del referido por favor: ").strip()
             try:
-                if telefono_referido.isdigit() and len(telefono_referido) >= 10:
+                if telefono_referido.isdigit() and len(telefono_referido) == 10:
                     break
                 print("Por favor ingrese un Número valido.")
             except ValueError:
@@ -100,7 +100,7 @@ def referido():
             "nombre": nombre_referido,
             "telefono": telefono_referido
         })
-        print("¡Rferido registrado!")
+        print("¡Referido registrado!")
     else:
         print("No se registró ningun referido..")
 
@@ -141,4 +141,69 @@ def pagar_propina(valor_cuenta, propina_sugerida):
 
 
 def factura_electronica():
+    """
+    Toma de decisiones, si el cliente quiere la factura electronica o no.
+    argumentos: Si o no
+    retorno: True si quiere factura, False si no
+    """
+
+    while True:
+        fact_electronica = input("\n¿El Cliente quiere factura electronica? (si/no): ").strip().lower()
+        if fact_electronica in ['si', 'no']:
+            break
+        print("Por favor ingresa una opción válida")
+
+    if fact_electronica == 'si':
+        print("Se imprime la factura electrónica")
+        return True
+    else:
+        print("El cliente no quiere factura electrónica")
+        return False
+
+
+def sugerencias():
+    """
+    Se almacena si el cliente quiere dejar una sugerencia sobre le servicio.
+    """
+    #Variable global
+    global SUGERENCIAS
+
+    while True:
+        recomendaciones = input("\n¿El cliente quiere dejar alguna sugerencia? (si/no)")
+        if recomendaciones in ['si', 'no']:
+            break
+        print("Opción no válida. Por favor, ingrese 'si' o 'no'.")
+
+    if recomendaciones == 'si':
+        sugerencia = input("\nPor favor, ingresa la sugerencia: ")
+        #!Almacenar
+        SUGERENCIAS.append({
+            "Sugerencias": sugerencia
+        })
+
+def main():
+    """Función principal que ejecuta el programa"""
+    global NUMERO_CLIENTES
     
+    while True:
+        NUMERO_CLIENTES += 1
+        print(f"\nCliente #{NUMERO_CLIENTES}")
+        
+        # Procesar cliente
+        valor_cuenta, propina = valor_propina()
+        total, pago_propina = pagar_propina(valor_cuenta, propina)
+        referido()
+        factura_electronica()
+        sugerencias()
+        
+        # Preguntar por nuevo cliente
+        continuar = input("\n¿Desea registrar un nuevo cliente? (si/no): ").strip().lower()
+        if continuar != 'si':
+            break
+    
+    print(f"\nTotal de clientes atendidos: {NUMERO_CLIENTES}")
+    print(f"Total de ventas del día: ${TOTAL_VENTAS:,.2f}")
+
+if __name__ == "__main__":
+    main()
+
