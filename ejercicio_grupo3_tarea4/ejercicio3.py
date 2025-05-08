@@ -93,3 +93,45 @@ def representacion_datos(promedio_horas):
     print("="*50)
     
     print(f"\nEste es el promedio de las horas de entretenimiento: {promedio_horas}")
+
+def main(ENCUESTADOS): 
+    """
+    Función principal que orquesta la encuesta de horas de Netflix.
+
+    Controla el flujo del programa para solicitar datos de un número
+    específico de encuestados, calcula el promedio y muestra los resultados.
+
+    Args:
+        ENCUESTADOS (int): El número total de personas a encuestar.
+    """
+    print("\n" + "="*50)
+    print("  Encuestas Netflix - HORAS VISTAS".center(50))
+    print("="*50)
+
+    
+    print(f"\nSe solicitará la cantidad de horas para: {ENCUESTADOS} personas")
+
+    # --- CONTROL DEL FLUJO ---
+
+    # Bucle para solicitar datos a cada encuestado
+    print("\n--- Inicio de la recopilación de datos ---")
+    for i in range(ENCUESTADOS):
+        # Opcional: Mostrar a qué persona se le está pidiendo el dato
+        print(f"\n--- Ingresando datos para la Persona {i + 1} de {ENCUESTADOS} ---")
+
+        # Llama a la función que pide, valida y guarda el dato en la lista global HORAS
+        solicitar_datos_ingresar()
+
+    print("\n--- Recopilación de datos finalizada ---")
+
+    # Calcular el promedio una vez que se tienen todos los datos
+    # Pasamos la lista global HORAS a la función promedio
+    promedio_final = promedio(HORAS)
+
+    # Mostrar los resultados llamando a la función de representación
+    # Pasamos el promedio calculado (promedio_final) a representacion_datos
+    representacion_datos(promedio_final)
+
+
+if __name__ == "__main__":
+    main(ENCUESTADOS) 
