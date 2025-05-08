@@ -181,6 +181,67 @@ def sugerencias():
             "Sugerencias": sugerencia
         })
 
+def mostrar_factura(valor_cuenta, propina_sugerida, pago_propina, tiene_factura_electronica):
+    """
+    Muestra un formato de factura detallado para el cliente.
+    """
+    print("\n" + "="*50)
+    print("RESTAURANTE DOÑA PANCHA".center(50))
+    print("FACTURA DE VENTA".center(50))
+    print("="*50)
+    
+    # Detalles de la cuenta
+    print(f"{'Subtotal:':<30} ${valor_cuenta:>15,.2f}")
+    if pago_propina:
+        print(f"{'Propina (15%):':<30} ${propina_sugerida:>15,.2f}")
+        total = valor_cuenta + propina_sugerida
+    else:
+        print(f"{'Propina:':<30} {'No aplicada':>16}")
+        total = valor_cuenta
+    
+    print("-"*50)
+    print(f"{'TOTAL A PAGAR:':<30} ${total:>15,.2f}")
+    print("-"*50)
+    
+    # Información adicional
+    print("\nInformación adicional:")
+    print(f"Factura electrónica: {'Sí' if tiene_factura_electronica else 'No'}")
+    
+    print("\n" + "="*50)
+    print("¡Gracias por su visita!".center(50))
+    print("Vuelva pronto".center(50))
+    print("="*50)
+
+def mostrar_resumen_dia():
+    """
+    Muestra un resumen detallado de las operaciones del día
+    """
+    print("\n" + "="*60)
+    print("RESUMEN DEL DÍA - RESTAURANTE DOÑA PANCHA".center(60))
+    print("="*60)
+    
+    # Información general
+    print(f"\nTotal de clientes atendidos: {NUMERO_CLIENTES}")
+    print(f"Total de ventas del día: ${TOTAL_VENTAS:,.2f}")
+    
+    # Mostrar referidos
+    print("\nReferidos registrados:")
+    if REFERIDOS:
+        for ref in REFERIDOS:
+            print(f"- {ref['nombre']}: {ref['telefono']}")
+    else:
+        print("- No se registraron referidos")
+    
+    # Mostrar sugerencias
+    print("\nSugerencias recibidas:")
+    if SUGERENCIAS:
+        for sug in SUGERENCIAS:
+            print(f"- {sug['Sugerencias']}")
+    else:
+        print("- No se registraron sugerencias")
+    
+    print("\n" + "="*60)
+
 def main():
     """Función principal que ejecuta el programa"""
     global NUMERO_CLIENTES
@@ -193,16 +254,19 @@ def main():
         valor_cuenta, propina = valor_propina()
         total, pago_propina = pagar_propina(valor_cuenta, propina)
         referido()
-        factura_electronica()
+        tiene_factura_electronica = factura_electronica()
         sugerencias()
+        
+        # Mostrar factura
+        mostrar_factura(valor_cuenta, propina, pago_propina, tiene_factura_electronica)
         
         # Preguntar por nuevo cliente
         continuar = input("\n¿Desea registrar un nuevo cliente? (si/no): ").strip().lower()
         if continuar != 'si':
             break
     
-    print(f"\nTotal de clientes atendidos: {NUMERO_CLIENTES}")
-    print(f"Total de ventas del día: ${TOTAL_VENTAS:,.2f}")
+    # Mostrar resumen del día
+    mostrar_resumen_dia()
 
 if __name__ == "__main__":
     main()
