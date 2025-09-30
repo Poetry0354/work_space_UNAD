@@ -21,7 +21,7 @@
 Este es mi **workspace académico completo** donde desarrollo y organizo todos los ejercicios y proyectos de mi carrera en **Tecnología en Desarrollo de Software**. Actualmente incluye dos cursos fundamentales:
 
 - 🔰 **Algoritmos y Programación** - Fundamentos de la programación
-- 🚀 **Programación Avanzada** - Paradigmas y desarrollo de aplicaciones complejas *(Semestre 2025-1)*
+- 🚀 **Programación Avanzada** - Paradigmas y desarrollo de aplicaciones complejas *(Semestre 2025-2)*
 
 Aquí encontrarás una colección de proyectos en Python organizados pedagógicamente para facilitar el aprendizaje progresivo.
 
