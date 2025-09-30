@@ -1,4 +1,4 @@
-# 🎓 Algoritmos y Programación - UNAD
+# 🎓 Repositorio de Algoritmos y Programación
 
 <div align="center">
 
@@ -9,265 +9,121 @@
 
 **🏛️ Universidad Nacional Abierta y a Distancia (UNAD)**  
 **💻 Tecnología en Desarrollo de Software - ECBTI**  
-**📚 Curso: Algoritmos y Programación**
+
+### 👋 ¡Bienvenido a mi repositorio académico!
 
 </div>
 
 ---
 
-## 🌟 **Descripción del Proyecto**
+## 🌟 **Acerca de este Repositorio**
 
-Este repositorio contiene una **colección completa de ejercicios de algoritmia** desarrollados en Python como parte del proceso de aprendizaje en el curso de Algoritmos y Programación. Los ejercicios están **organizados pedagógicamente** por nivel de complejidad, desde conceptos fundamentales hasta programación modular avanzada.
+Este es mi **workspace académico** donde desarrollo y organizo todos los ejercicios del curso de **Algoritmos y Programación**. Aquí encontrarás una colección de proyectos en Python organizados pedagógicamente para facilitar el aprendizaje progresivo.
 
-## 🎯 **Objetivos de Aprendizaje**
-
-- 🧠 **Desarrollar pensamiento lógico** y algorítmico
-- 💻 **Dominar programación estructurada** en Python
-- 🔧 **Aplicar estructuras de control** (condicionales, ciclos, funciones)
-- 📊 **Manejar estructuras de datos** (listas, diccionarios)
-- 🏢 **Resolver problemas empresariales** reales mediante código
-- 📝 **Implementar buenas prácticas** de programación
-
-## 🗂️ **Estructura del Repositorio**
-
-```
-🎓 Algoritmos y Programación - UNAD/
-│
-├── 📚 algoritmos_programacion/
-│   ├── 🔰 01_fundamentos/           # Variables, operaciones básicas
-│   ├── 🔀 02_condicionales/         # if-else, toma de decisiones
-│   ├── 🔄 03_ciclos_y_listas/       # for, while, estructuras de datos
-│   └── ⚙️ 04_funciones/             # Programación modular
-│
-├── 📄 documentos/                   # Documentación original del curso
-└── 📖 README.md                     # Este archivo
-```
-
-## 🚀 **Progresión de Aprendizaje**
-
-<table>
-<tr>
-<td align="center" width="25%">
-
-### 🔰 **Nivel 1**
-**Fundamentos**
-- Variables y tipos de datos
-- Entrada/salida básica
-- Operaciones matemáticas
-- Primeros algoritmos
-
-</td>
-<td align="center" width="25%">
-
-### 🔀 **Nivel 2**
-**Condicionales**
-- Estructuras `if-else`
-- Operadores lógicos
-- Validación de datos
-- Toma de decisiones
-
-</td>
-<td align="center" width="25%">
-
-### 🔄 **Nivel 3**
-**Ciclos y Listas**
-- Estructuras repetitivas
-- Manejo de colecciones
-- Acumuladores
-- Sistemas complejos
-
-</td>
-<td align="center" width="25%">
-
-### ⚙️ **Nivel 4**
-**Funciones**
-- Programación modular
-- Parámetros y retornos
-- Reutilización de código
-- Documentación
-
-</td>
-</tr>
-</table>
-
-## 💼 **Proyectos Destacados**
-
-<details>
-<summary>🛒 <strong>Sistema de Ventas Black Friday</strong></summary>
-
-**Archivos:** `ejercicio1.py` (ciclos), `ejercicio1.py` (condicionales)  
-**Características:**
-- Sistema completo de punto de venta
-- Cálculo automático de descuentos por categoría
-- Gestión de inventario por líneas de producto
-- Reportes de ventas detallados
-
-</details>
-
-<details>
-<summary>🍽️ <strong>Sistema de Gestión Restaurantera</strong></summary>
-
-**Archivo:** `ejercicio2.py` (ciclos)  
-**Características:**
-- Cálculo automático de propinas
-- Gestión de referidos con datos de contacto
-- Facturación electrónica opcional
-- Sistema de sugerencias y feedback
-- Reportes diarios de operaciones
-
-</details>
-
-<details>
-<summary>🏥 <strong>Sistema de Clasificación Médica</strong></summary>
-
-**Archivo:** `ejercicio4.py` (funciones)  
-**Características:**
-- Clasificación automática de diabetes por glucosa
-- Validación médica de parámetros
-- Interfaz profesional de diagnóstico
-- Documentación técnica completa
-
-</details>
-
-<details>
-<summary>📊 <strong>Sistema de Encuestas y Análisis</strong></summary>
-
-**Archivo:** `ejercicio3.py` (ciclos)  
-**Características:**
-- Recolección de datos estructurada
-- Cálculos estadísticos automáticos
-- Validación de entrada robusta
-- Presentación de resultados profesional
-
-</details>
-
-## 🛠️ **Tecnologías y Herramientas**
+## 🗺️ **Navegación Rápida**
 
 <div align="center">
 
-| Tecnología | Uso | Nivel |
-|------------|-----|-------|
-| 🐍 **Python 3.x** | Lenguaje principal | Intermedio |
-| 📊 **Estructuras de Datos** | Listas, diccionarios | Básico-Intermedio |
-| 🔄 **Algoritmos** | Ciclos, condicionales | Básico-Intermedio |
-| ⚙️ **Funciones** | Programación modular | Intermedio |
-| 📝 **Documentación** | READMEs, comentarios | Profesional |
+### 🚀 **¿Por dónde empezar?**
+
+| 🎯 Si eres... | 📁 Ve directamente a... | 💡 Recomendación |
+|---------------|------------------------|------------------|
+| **🔰 Principiante** | [`01_fundamentos/`](./algoritmos_programacion/01_fundamentos/) | Comienza aquí para aprender lo básico |
+| **🎓 Estudiante de UNAD** | [`algoritmos_programacion/`](./algoritmos_programacion/) | Revisa la guía completa del curso |
+| **👨‍🏫 Profesor/Tutor** | [`documentos/`](./documentos/) | Consulta la documentación original |
+| **💻 Desarrollador** | [`04_funciones/`](./algoritmos_programacion/04_funciones/) | Ve directo a los ejercicios avanzados |
 
 </div>
 
-## 📈 **Estadísticas del Proyecto**
+## 📚 **Contenido Principal**
 
-<div align="center">
+```
+📁 algoritmos_programacion/    ← 🎯 CONTENIDO PRINCIPAL DEL CURSO
+├── 🔰 01_fundamentos/         ← Empezar aquí si eres nuevo
+├── 🔀 02_condicionales/       ← Lógica de decisiones
+├── 🔄 03_ciclos_y_listas/     ← Estructuras avanzadas  
+└── ⚙️ 04_funciones/           ← Programación modular
 
-![Ejercicios](https://img.shields.io/badge/Total_Ejercicios-11-blue)
-![Líneas de Código](https://img.shields.io/badge/Líneas_de_Código-2000+-green)
-![Conceptos](https://img.shields.io/badge/Conceptos_Cubiertos-15+-orange)
-![Documentación](https://img.shields.io/badge/Archivos_README-6-purple)
+📁 documentos/                 ← Guías y documentación original
+```
 
-</div>
+> 💡 **Tip:** Cada carpeta tiene su propio README con explicaciones detalladas</div>
 
-## 🎯 **Conceptos de Programación Cubiertos**
+## 🏆 **Proyectos Destacados**
 
-### 🔢 **Fundamentos**
-- Variables (int, float, string)
-- Operadores matemáticos y lógicos
-- Entrada y salida de datos
-- Comentarios y documentación
+### 🛒 **Sistema de Ventas Black Friday**
+Punto de venta completo con gestión de descuentos automáticos por categoría
 
-### 🔀 **Estructuras de Control**
-- Condicionales (if, else, elif)
-- Ciclos (for, while)
-- Operadores de comparación
-- Lógica booleana
+### 🍽️ **Gestión Restaurantera "Doña Pancha"**  
+Sistema integral con propinas, referidos y facturación electrónica
 
-### 📊 **Estructuras de Datos**
-- Listas y manipulación
-- Diccionarios y mapeo
-- Acumuladores y contadores
-- Funciones built-in (sum, len)
+### 🏥 **Clasificador Médico de Diabetes**
+Sistema de diagnóstico automático basado en niveles de glucosa
 
-### ⚙️ **Programación Avanzada**
-- Definición de funciones
-- Parámetros y argumentos
-- Valores de retorno
-- Scope de variables
-- Modularización de código
+### 📊 **Analizador de Encuestas Netflix**
+Herramienta de recolección y análisis estadístico de datos
 
-## 🏢 **Casos de Uso Empresariales**
+> 📖 **Ver detalles completos:** [`algoritmos_programacion/`](./algoritmos_programacion/)
 
-Los ejercicios están diseñados para simular **situaciones del mundo real**:
+## 🎯 **Lo que Aprenderás**
 
-- 🛒 **Retail y E-commerce**: Sistemas de descuentos y promociones
-- 🍽️ **Industria Restaurantera**: Gestión de propinas y servicios
-- 🏥 **Sector Salud**: Sistemas de diagnóstico y clasificación
-- 📊 **Investigación de Mercados**: Encuestas y análisis estadístico
-- 🏃‍♂️ **Retail Deportivo**: Programas de fidelización
+- 🧠 **Pensamiento algorítmico** y resolución de problemas
+- 💻 **Programación estructurada** en Python  
+- 🔧 **Estructuras de control** (condicionales, ciclos, funciones)
+- 📊 **Manejo de datos** (listas, diccionarios)
+- 🏢 **Aplicaciones empresariales** reales
 
-## 🚀 **Cómo Utilizar este Repositorio**
+## 🚀 **Empezar Ahora**
 
-### 📚 **Para Estudiantes:**
-1. **Comienza por el nivel 1** (Fundamentos) si eres principiante
-2. **Lee el README** de cada carpeta antes de revisar los ejercicios
-3. **Ejecuta los códigos** y experimenta con diferentes valores
-4. **Estudia la documentación** en los comentarios de cada archivo
-
-### 👨‍🏫 **Para Profesores:**
-- Utiliza la **progresión estructurada** para planificar clases
-- Los **READMEs explicativos** sirven como material de apoyo
-- Los **casos empresariales** ayudan a contextualizar conceptos
-- La **documentación completa** facilita la evaluación
-
-### 💻 **Para Desarrolladores:**
-- **Revisa la evolución** del código desde básico hasta avanzado
-- **Estudia las buenas prácticas** implementadas
-- **Analiza la modularización** y estructura del código
-
-## 📋 **Requisitos del Sistema**
-
+### 📋 **Requisitos**
 ```bash
-# Requisitos mínimos
 Python 3.6+
-Sistema operativo: Windows, macOS, Linux
-Editor de texto o IDE (recomendado: VS Code, PyCharm)
-
-# Instalación
-git clone https://github.com/Poetry0354/work_space_UNAD.git
-cd work_space_UNAD
+Git (para clonar el repositorio)
+Editor de texto (VS Code recomendado)
 ```
 
-## 📞 **Información de Contacto**
+### ⚡ **Instalación Rápida**
+```bash
+git clone https://github.com/Poetry0354/work_space_UNAD.git
+cd work_space_UNAD/algoritmos_programacion
+```
+
+### 🎯 **Ruta de Aprendizaje Sugerida**
+1. **Lee este README** para entender la estructura
+2. **Ve a [`algoritmos_programacion/`](./algoritmos_programacion/)** para la guía detallada
+3. **Comienza con [`01_fundamentos/`](./algoritmos_programacion/01_fundamentos/)** 
+4. **Progresa secuencialmente** por cada nivel
+
+---
+
+## 📞 **Información del Autor**
 
 <div align="center">
 
-**👨‍🎓 Estudiante:** Samuel Trujillo  
-**🏛️ Institución:** Universidad Nacional Abierta y a Distancia (UNAD)  
-**📚 Programa:** Tecnología en Desarrollo de Software  
-**📅 Período:** Segundo Semestre Académico  
+**👨‍🎓 Samuel Trujillo**  
+*Estudiante de Tecnología en Desarrollo de Software*  
+*Universidad Nacional Abierta y a Distancia (UNAD)*
 
----
+[![GitHub](https://img.shields.io/badge/GitHub-Poetry0354-black?style=flat&logo=github)](https://github.com/Poetry0354)
 
 ### 🤝 **Contribuciones**
-
-¡Las contribuciones son bienvenidas! Si encuentras algún error o tienes sugerencias de mejora:
-
-1. 🍴 Haz un fork del proyecto
-2. 🌟 Crea una rama para tu feature
-3. 💻 Realiza tus cambios
-4. 📤 Envía un pull request
+¡Las mejoras son bienvenidas! Si encuentras errores o tienes sugerencias:
+1. Fork del proyecto
+2. Crea tu rama de feature  
+3. Commit tus cambios
+4. Push y abre un Pull Request
 
 </div>
-
-## 📄 **Licencia**
-
-Este proyecto está bajo la Licencia MIT - ve el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 
 <div align="center">
 
-**⭐ Si este repositorio te ha sido útil, ¡no olvides darle una estrella! ⭐**
+**⭐ Si este repositorio te es útil, ¡no olvides darle una estrella! ⭐**
 
-![Desarrollado con ❤️](https://img.shields.io/badge/Desarrollado_con-❤️-red?style=for-the-badge)
-![Python](https://img.shields.io/badge/Hecho_en-Python-blue?style=for-the-badge&logo=python)
+![Desarrollado con ❤️](https://img.shields.io/badge/Desarrollado_con-❤️-red)
+![Python](https://img.shields.io/badge/Hecho_en-Python-blue?logo=python)
+
+**📚 Aprendiendo y compartiendo conocimiento - UNAD 2024**
 
 </div>

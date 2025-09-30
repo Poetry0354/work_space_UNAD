@@ -1,101 +1,155 @@
-# 🎓 Algoritmos y Programación - UNAD
+# 📚 Algoritmos y Programación - Guía Técnica
 
-**Tecnología en Desarrollo de Software ECBTI**  
-**Universidad Nacional Abierta y a Distancia (UNAD)**
+**Curso:** Algoritmos y Programación  
+**Programa:** Tecnología en Desarrollo de Software - ECBTI  
+**Institución:** Universidad Nacional Abierta y a Distancia (UNAD)
 
-## 📝 Descripción General
-Este repositorio contiene una colección completa de ejercicios de algoritmia y programación desarrollados en **Python**, organizados por nivel de complejidad y conceptos específicos. Los ejercicios forman parte del proceso de aprendizaje del segundo período académico y están diseñados para desarrollar habilidades de pensamiento lógico y programación estructurada.
+## 📖 Guía de Estudio
 
-## 🗂️ Estructura Organizativa
+Esta es la **guía técnica detallada** del curso, organizada por niveles de complejidad progresiva. Cada nivel incluye ejercicios específicos con documentación completa de conceptos y objetivos de aprendizaje.
 
-### 📁 **Organización por Niveles de Complejidad:**
+## 🗂️ Estructura de Niveles
+
+### 📁 **Organización por Complejidad Creciente:**
 
 ```
-algoritmos_programacion/
-├── 🔰 01_fundamentos/          # Conceptos básicos de programación
-├── 🔀 02_condicionales/        # Estructuras de decisión
-├── 🔄 03_ciclos_y_listas/      # Estructuras repetitivas y datos
-└── ⚙️ 04_funciones/            # Programación modular
+📚 algoritmos_programacion/
+├── 🔰 01_fundamentos/          # Variables, I/O, operaciones básicas
+├── 🔀 02_condicionales/        # if-else, lógica de decisión
+├── 🔄 03_ciclos_y_listas/      # for, while, estructuras de datos
+└── ⚙️ 04_funciones/            # Programación modular y funciones
 ```
 
-## 🎯 Progresión de Aprendizaje
+> **💡 Tip de Estudio:** Sigue el orden numérico. Cada nivel construye sobre los conceptos del anterior.
 
-### **Nivel 1: Fundamentos** 🔰
-- Variables y tipos de datos
-- Entrada/salida de información
-- Operaciones matemáticas básicas
-- Introducción a listas
+## 🎯 Progresión Técnica de Aprendizaje
 
-### **Nivel 2: Condicionales** 🔀
-- Estructuras `if`, `else`, `elif`
-- Operadores de comparación y lógicos
-- Toma de decisiones en programas
-- Validación de datos
+| Nivel | Conceptos Clave | Ejercicios | Complejidad |
+|-------|----------------|------------|-------------|
+| **🔰 01** | Variables, I/O, operaciones matemáticas | 4 archivos | ⭐ Básico |
+| **🔀 02** | if-else, validación, operadores lógicos | 4 archivos | ⭐⭐ Intermedio |
+| **🔄 03** | for, while, listas, diccionarios, sistemas | 3 archivos | ⭐⭐⭐ Avanzado |
+| **⚙️ 04** | Funciones, parámetros, modularización | 1 archivo | ⭐⭐⭐⭐ Experto |
 
-### **Nivel 3: Ciclos y Listas** 🔄
-- Estructuras repetitivas (`for`, `while`)
-- Manejo avanzado de listas y diccionarios
-- Acumuladores y contadores
-- Sistemas complejos de gestión
+## 💼 Casos de Estudio Empresariales
 
-### **Nivel 4: Funciones** ⚙️
-- Programación modular
-- Parámetros y valores de retorno
-- Reutilización de código
-- Documentación de funciones
+### 🛒 **E-commerce y Retail**
+- **Black Friday Byte** (03_ciclos): Sistema de ventas con descuentos por categoría
+- **Sports Store** (02_condicionales): Gestión de promociones por días
 
-## 📊 Fases Originales del Curso
+### 🍽️ **Industria de Servicios**  
+- **Restaurante Doña Pancha** (03_ciclos): Sistema integral de propinas y facturación
+- **Encuestas Netflix** (03_ciclos): Análisis estadístico de comportamiento
 
-| Fase Original | Nueva Organización | Conceptos Principales |
-|---------------|-------------------|----------------------|
+### 🏥 **Sector Salud**
+- **Clasificador de Diabetes** (04_funciones): Diagnóstico automatizado por glucosa
+
+### 📊 **Análisis de Datos**
+- **Gastos Mensuales** (01_fundamentos): Cálculo de promedios y totales
+- **Encuestas** (03_ciclos): Recolección y procesamiento estadístico
+
+## 🔧 Tecnologías y Conceptos Implementados
+
+### **Nivel Básico** 🔰
+```python
+# Variables y tipos de datos
+nombre = "Samuel"           # string
+edad = 25                   # int  
+promedio = 85.5            # float
+
+# Entrada y salida
+valor = input("Ingresa un número: ")
+print(f"El resultado es: {resultado}")
+```
+
+### **Nivel Intermedio** 🔀
+```python
+# Estructuras condicionales
+if condicion:
+    # Acción si verdadero
+elif otra_condicion:
+    # Acción alternativa
+else:
+    # Acción por defecto
+
+# Validación de datos
+while not entrada.isdigit():
+    entrada = input("Ingresa un número válido: ")
+```
+
+### **Nivel Avanzado** 🔄
+```python
+# Ciclos y estructuras de datos
+for i in range(25):  # Ciclo FOR con rango definido
+    # Procesamiento de datos
+
+while continuar:     # Ciclo WHILE con condición dinámica
+    # Lógica de negocio
+    
+# Listas y diccionarios
+datos = []
+resumen = {'total': 0, 'promedio': 0}
+```
+
+### **Nivel Experto** ⚙️
+```python
+# Funciones modulares
+def clasificar_glucosa(nivel):
+    """Clasifica nivel de glucosa según criterios médicos"""
+    if nivel <= 75:
+        return "Hipoglucemia"
+    elif nivel < 105:
+        return "Normal"
+    # ... más lógica
+    
+# Llamada a función
+resultado = clasificar_glucosa(90)
+```
+
+## 📊 Mapeo de Fases Originales
+
+| Fase Original del Curso | Nueva Organización | Enfoque Temático |
+|------------------------|-------------------|------------------|
 | `ejercicios_grupo_4` | **01_fundamentos** | Variables, operaciones básicas |
-| `ejercicios_grupo4_tarea3` | **02_condicionales** | if-else, validación |
-| `ejercicio_grupo3_tarea4` | **03_ciclos_y_listas** + **04_funciones** | for, while, listas, funciones |
+| `ejercicios_grupo4_tarea3` | **02_condicionales** | Decisiones y validación |
+| `ejercicio_grupo3_tarea4` | **03_ciclos_y_listas + 04_funciones** | Estructuras avanzadas |
 
-## 🏢 Casos de Uso Empresariales
-Los ejercicios simulan situaciones reales de:
+## 🎓 Objetivos de Aprendizaje por Nivel
 
-- **🏪 Sistemas de Ventas** (Black Friday, descuentos)
-- **🍽️ Gestión Restaurantera** (propinas, facturación)
-- **📊 Encuestas y Análisis** (Netflix, estadísticas)
-- **🏥 Sistemas Médicos** (clasificación diagnóstica)
-- **🏃‍♂️ Comercio Deportivo** (fidelización, promociones)
+Al completar cada nivel, deberías dominar:
 
-## 🎯 Objetivos del Curso
+### 🔰 **01_fundamentos**
+- ✅ Declarar variables de diferentes tipos
+- ✅ Realizar operaciones matemáticas
+- ✅ Manejar entrada/salida de datos
+- ✅ Estructurar código básico
 
-Al completar todos los ejercicios, el estudiante será capaz de:
+### 🔀 **02_condicionales**  
+- ✅ Implementar lógica de decisión
+- ✅ Validar entrada de usuarios
+- ✅ Usar operadores de comparación
+- ✅ Aplicar reglas de negocio
 
-1. **Análizar problemas** y diseñar soluciones algorítmicas
-2. **Implementar estructuras** de control básicas y avanzadas
-3. **Manejar datos** usando listas, diccionarios y variables
-4. **Crear programas modulares** usando funciones
-5. **Validar entrada** de usuarios de forma robusta
-6. **Documentar código** de manera profesional
-7. **Aplicar lógica de negocio** en sistemas reales
+### 🔄 **03_ciclos_y_listas**
+- ✅ Controlar flujo con ciclos
+- ✅ Manipular listas y diccionarios
+- ✅ Implementar acumuladores
+- ✅ Crear sistemas complejos
 
-## 🛠️ Tecnologías y Herramientas
-- **Lenguaje:** Python 3.x
-- **Paradigma:** Programación estructurada y modular
-- **Conceptos:** Algoritmia, lógica de programación
-- **Metodología:** Aprendizaje progresivo por niveles
+### ⚙️ **04_funciones**
+- ✅ Diseñar funciones modulares
+- ✅ Manejar parámetros y retornos
+- ✅ Documentar código profesionalmente
+- ✅ Aplicar principios de reutilización
 
-## 📚 Recursos Adicionales
-- **Documentos:** Consultar carpeta `documentos/` para guías originales
-- **Ejemplos:** Cada carpeta contiene README específico con detalles
-- **Progresión:** Seguir el orden numérico para aprendizaje óptimo
+## 🚀 Cómo Estudiar con Este Material
 
-## 🏆 Competencias Desarrolladas
-- **Pensamiento lógico** y algorítmico
-- **Resolución de problemas** computacionales
-- **Programación estructurada** en Python
-- **Análisis y diseño** de sistemas simples
-- **Buenas prácticas** de programación
+1. **📖 Lee el README** de cada nivel antes de ver el código
+2. **💻 Ejecuta los ejemplos** y experimenta con diferentes valores  
+3. **🔍 Analiza la lógica** paso a paso en cada ejercicio
+4. **✏️ Modifica el código** para entender su funcionamiento
+5. **🎯 Practica** creando ejercicios similares
 
 ---
 
-*"Desarrollamos algoritmos para resolver problemas del mundo real"*
-
-**Curso:** Algoritmos y Programación  
-**Programa:** Tecnología en Desarrollo de Software  
-**Institución:** Universidad Nacional Abierta y a Distancia (UNAD)  
-**Período:** Segundo semestre académico
+*💡 **Recuerda:** La programación se aprende practicando. ¡No tengas miedo de experimentar y hacer errores!*
