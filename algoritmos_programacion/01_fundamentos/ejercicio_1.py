@@ -12,7 +12,3 @@ area = (base * altura) / 2
 
 # * FINALMENTE mostramos el resultado
 print(f"El area del triangulo es: {area}")
-
-
-
-

@@ -1,0 +1,70 @@
+============================================================
+UNIVERSIDAD NACIONAL ABIERTA Y A DISTANCIA - UNAD
+Curso: Programación Avanzada
+Estudiante: Samuel Felipe Trujillo Espinosa
+============================================================
+
+🧩 NOMBRE DEL PROYECTO:
+Aplicación Climática Interactiva
+
+📌 DESCRIPCIÓN GENERAL:
+Aplicación desarrollada en Python que permite registrar, consultar y gestionar
+información sobre estaciones meteorológicas, datos climáticos, suelos, fuentes de agua
+y comunidades agrícolas, utilizando una interfaz gráfica con Tkinter y una base de datos
+SQLite para persistencia de datos.
+
+============================================================
+🚀 SCRIPT PRINCIPAL DE EJECUCIÓN:
+main_gui.py
+
+🧭 INSTRUCCIONES DE USO:
+1. Asegúrese de tener instalado Python 3.10 o superior.
+2. Instale las dependencias necesarias:
+   - Tkinter (incluido por defecto en Python)
+   - Matplotlib (para gráficos)
+     Comando: pip install matplotlib
+3. Ejecute el archivo principal:
+   python main_gui.py
+4. Desde la ventana principal, seleccione el módulo que desea usar:
+   - 📡 Registrar Estación
+   - 🌦️ Registrar Dato Climático
+   - 🌱 Registrar Suelo
+   - 💧 Registrar Fuente de Agua
+   - 👩‍🌾 Registrar Comunidad
+   - 📊 Mostrar Resumen
+
+============================================================
+🗄️ BASE DE DATOS:
+Nombre del archivo: aplicacion_climatica.db
+Ubicación: Misma carpeta del proyecto
+Creación automática: Sí (el sistema crea las tablas al ejecutarse por primera vez)
+
+============================================================
+🧠 FUNCIONALIDADES PRINCIPALES:
+✔ Crear, consultar, editar y eliminar registros de cada módulo.
+✔ Visualizar datos en tablas interactivas (Treeview).
+✔ Generar informes con totales y gráficos estadísticos.
+✔ Persistencia garantizada mediante SQLite.
+
+============================================================
+🧪 PRUEBAS REALIZADAS:
+- Inserción, consulta y eliminación de registros.
+- Validación de datos numéricos y campos vacíos.
+- Generación de gráficos y recarga de información.
+- Verificación de conexión con la base SQLite.
+
+============================================================
+📁 ESTRUCTURA DEL PROYECTO:
+samuelTrujillo/
+│
+├── db.py                   # Creación y conexión de tablas
+├── main_gui.py              # Interfaz principal Tkinter
+├── aplicacion_climatica.db  # Base de datos SQLite
+├── leer.txt               # Instrucciones de uso
+└── (otros módulos si aplica)
+
+============================================================
+Samuel Felipe Trujillo Espinosa
+Tecnología en Desarrollo de Software
+UNAD - 2025
+============================================================
