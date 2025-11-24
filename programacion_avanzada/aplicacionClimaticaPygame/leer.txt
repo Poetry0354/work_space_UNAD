@@ -1,0 +1,53 @@
+=================================================
+**APLICACIÓN CLIMÁTICA CON SOPORTE TÉCNICO**
+=================================================
+
+Este proyecto es una aplicación de escritorio para gestionar datos climáticos, recursos naturales y comunidades agrícolas. Incluye una funcionalidad de chat para soporte técnico en tiempo real.
+
+**ESTRUCTURA DEL PROYECTO**
+
+*   `main_gui.py`: Script principal para ejecutar la aplicación de escritorio.
+*   `chat_server.py`: Script del servidor de chat. Debe estar en ejecución para que el chat funcione.
+*   `chat_client.py`: Script del cliente de chat. Es lanzado desde la aplicación principal.
+*   `db.py`: Módulo para la conexión con la base de datos.
+*   `aplicacion_climatica.db`: Archivo de la base de datos SQLite.
+*   Otros scripts (`*.py`): Módulos que definen las clases del modelo de datos.
+*   `leer.txt`: Este archivo.
+
+**INSTRUCCIONES DE USO**
+
+Para utilizar la aplicación y la función de chat, sigue estos pasos:
+
+1.  **Requisitos Previos:**
+    *   Tener Python 3 instalado.
+    *   Se recomienda estar en un entorno virtual.
+    *   Las librerías `tkinter` y `matplotlib` deben estar instaladas. Generalmente `tkinter` viene con Python. Si no, instálalas con:
+        ```
+        pip install matplotlib
+        ```
+
+2.  **Iniciar el Servidor de Chat:**
+    *   Abre una terminal en la carpeta del proyecto.
+    *   Ejecuta el siguiente comando para iniciar el servidor:
+        ```
+        python chat_server.py
+        ```
+    *   Verás un mensaje como "Servidor de chat escuchando en 127.0.0.1:65432".
+    *   **Deja esta terminal abierta.** El servidor debe estar corriendo para que el chat funcione.
+
+3.  **Ejecutar la Aplicación Principal:**
+    *   Abre **una nueva terminal** en la misma carpeta del proyecto.
+    *   Ejecuta el script de la GUI principal:
+        ```
+        python main_gui.py
+        ```
+    *   Esto abrirá la ventana principal de la aplicación.
+
+4.  **Acceder al Soporte Técnico:**
+    *   En la ventana principal, haz clic en el botón "💬 Soporte Técnico".
+    *   Aparecerá una pequeña ventana pidiéndote un apodo (nickname). Escribe el que prefieras y haz clic en "Aceptar".
+    *   Se abrirá la ventana del chat. Ahora puedes comunicarte con otros usuarios que se conecten (por ejemplo, el técnico de soporte).
+
+**FRAGMENTOS DE PRUEBA (COMENTARIOS EN EL CÓDIGO)**
+
+Dentro de `chat_server.py` y `chat_client.py` se han incluido comentarios para explicar las partes clave del código. Por ejemplo, en `chat_server.py`, puedes descomentar la línea `# print(f"Mensaje retransmitido: {message.decode('utf-8')}")` dentro de la función `handle_client` para ver en la consola del servidor todos los mensajes que se están retransmitiendo. Esto es útil para depuración.
