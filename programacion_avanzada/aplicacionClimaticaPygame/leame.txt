@@ -1,0 +1,27 @@
+# Instrucciones para el Juego del Laberinto
+
+## ¿Dónde está la nueva funcionalidad?
+
+Se ha añadido un juego de laberinto como una nueva opción de entretenimiento dentro de la aplicación climática.
+
+El código fuente del juego se encuentra en el archivo: `juego_laberinto.py`. Este archivo contiene toda la lógica del juego, la generación del laberinto y las pruebas de software (incluidas como comentarios).
+
+La integración con la aplicación principal se ha realizado en el archivo `main_gui.py`.
+
+## ¿Cómo jugar?
+
+1.  Ejecuta la aplicación principal:
+    ```
+    python main_gui.py
+    ```
+
+2.  En el menú principal, verás un nuevo botón llamado "🎮 Jugar Laberinto".
+
+3.  Haz clic en ese botón. Se abrirá una nueva ventana con el juego del laberinto.
+
+## Reglas del Juego
+
+-   **Objetivo:** Lleva el cuadrado amarillo (jugador) desde la entrada (verde) hasta la salida (roja).
+-   **Controles:** Usa las **flechas del teclado** (Arriba, Abajo, Izquierda, Derecha) para moverte.
+-   **Cronómetro:** El tiempo empezará a contar justo cuando realices tu primer movimiento.
+-   **Finalizar:** Una vez llegues a la salida, el juego terminará y mostrará tu tiempo. Puedes cerrar la ventana del juego o presionar la tecla `ESC` para salir en cualquier momento.

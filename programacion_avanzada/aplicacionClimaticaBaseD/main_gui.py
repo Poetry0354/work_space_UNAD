@@ -31,23 +31,6 @@ def abrir_chat_soporte():
     except Exception as e:
         messagebox.showerror("Error", f"Ocurrió un error al abrir el chat: {e}")
 
-def abrir_juego_laberinto():
-    """
-    Lanza el juego del laberinto en un proceso separado.
-    """
-    try:
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        juego_path = os.path.join(script_dir, 'juego_laberinto.py')
-        
-        if not os.path.exists(juego_path):
-            messagebox.showerror("Error", f"No se pudo encontrar el juego en la ruta:\n{juego_path}")
-            return
-
-        subprocess.Popen([sys.executable, juego_path])
-
-    except Exception as e:
-        messagebox.showerror("Error", f"Ocurrió un error al abrir el juego: {e}")
-
 # --------------------------------------------------------
 # Funciones de los botones
 # --------------------------------------------------------
@@ -810,7 +793,6 @@ botones = [
     ("💧 Registrar Fuente de Agua", abrir_fuente_agua),
     ("👩‍🌾 Registrar Comunidad", abrir_comunidad),
     ("📊 Mostrar Resumen", mostrar_resumen),
-    ("🎮 Jugar Laberinto", abrir_juego_laberinto),
     ("💬 Soporte Técnico", abrir_chat_soporte),
     ("🚪 Salir", salir)
 ]
